@@ -1,26 +1,23 @@
-import { useState } from 'react'
+import React from 'react'
+import HeroCover from './components/HeroCover'
+import EngineShowcase from './components/EngineShowcase'
+import ParallaxGallery from './components/ParallaxGallery'
+import ThrustCalculator from './components/ThrustCalculator'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-black text-white font-['Manrope',_Inter,_system-ui]">
+      <HeroCover />
+      <EngineShowcase />
+      <ParallaxGallery />
+      <ThrustCalculator />
+      <footer className="relative border-t border-white/10 bg-black/60">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(closest-side,rgba(99,102,241,0.08),transparent_70%)]" />
+        <div className="relative mx-auto max-w-6xl px-6 py-10 flex items-center justify-between">
+          <div className="text-sm text-white/60">Crafted for cinematic aerospace presentations</div>
+          <a href="#" className="text-sm text-white/70 hover:text-white">Back to top ↑</a>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
